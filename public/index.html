@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✌ Do List</title>
+    <script src="../dist/main.js"></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">✌ Do List</div>
+      <div class="currentProject">
+        Project 1
+      </div>
+      <div class="user">
+        <div class="userName">dave69</div>
+        <div class="userImg"></div>
+      </div>
+    </header>
+    <div class="sidebar">
+    <ul class="projects">
+      <li><span class="caret">PROJECT 1</span>
+            <ul class="nested tasks">
+              <li><span class="caret">HIGH PRIORITY TASK</span></li>
+              <li><span class="caret">MEDIUM PRIORITY TASK</span></li>
+              <li><span class="caret">LOW PRIORITY TASK</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+    </div>
+    <div class="container">
+      <div class="filter">
+        <div class="filterBlankPriority"></div>
+        <div class="filterChecked"></div>
+        <div class="filterTitle">TITLE A-Z</div>
+        <div class="filterDescription">DESCRIPTION A-Z</div>
+        <div class="filterDate">DATE OLDEST-NEWEST</div>
+        <div class="filterPriority">PRIORITY HIGH-LOW</div>
+        <div class="filterBlank"></div>
+      </div>
+      <div class="card">
+        <div class="priorityHighlight pHigh"></div>
+        <input type="checkbox" name="checked" id="checked" />
+        <div class="title">High priority task</div>
+        <div class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </div>
+        <div class="dueDate">01/01/2001</div>
+        <div class="priority">High</div>
+        <div class="edit">
+          <div class="ham"></div>
+          <div class="ham"></div>
+          <div class="ham"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="priorityHighlight pMedium"></div>
+        <input type="checkbox" name="checked" id="checked" />
+        <div class="title">Medium prioity task</div>
+        <div class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </div>
+        <div class="dueDate">01/01/2001</div>
+        <div class="priority">Medium</div>
+        <div class="edit">
+          <div class="ham"></div>
+          <div class="ham"></div>
+          <div class="ham"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="priorityHighlight pLow"></div>
+        <input type="checkbox" name="checked" id="checked" />
+        <div class="title">Low priority task</div>
+        <div class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </div>
+        <div class="dueDate">01/01/2001</div>
+        <div class="priority">Low</div>
+        <div class="edit">
+          <div class="ham"></div>
+          <div class="ham"></div>
+          <div class="ham"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

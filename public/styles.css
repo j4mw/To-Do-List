@@ -1,0 +1,190 @@
+:root {
+  font-family: monospace;
+  --primary-light: #fcfcfc;
+  --secondary-light: #cccccc;
+  --card-backing: #eeeeee;
+  --highlights: #ff784f;
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 17rem repeat(7, 8fr);
+  grid-template-rows: 5rem repeat(7, 8fr);
+  grid-template-areas:
+    "header header header header header header header header"
+    "sidebar container container container container container container container"
+    "sidebar container container container container container container container"
+    "sidebar container container container container container container container"
+    "sidebar container container container container container container container"
+    "sidebar container container container container container container container"
+    "sidebar container container container container container container container"
+    "sidebar container container container container container container container"
+    "sidebar container container container container container container container";
+}
+.header {
+  grid-area: header;
+  background-color: var(--highlights);
+  display: grid;
+  grid-template-columns: 15rem repeat(7, 8fr);
+  grid-template-rows: 5rem;
+  grid-template-areas: "logo currentProject currentProject currentProject currentProject currentProject . user";
+  align-items: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--secondary-light);
+  list-style-type: none;
+}
+.container {
+  grid-area: container;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem repeat(10, 1fr);
+  background-color: var(--primary-light);
+}
+
+.filter {
+  background-color: var(--card-backing);
+  margin: 0.2rem;
+  display: grid;
+  grid-template-columns: 1rem 5rem 1fr 3fr 0.7fr 5rem 5rem;
+  grid-template-rows: 1fr;
+}
+.userImg {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  border-radius: 2.5rem;
+  margin-right: 1.5rem;
+}
+
+.user {
+  grid-area: user;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.currentProject {
+  grid-area: currentProject;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  justify-self: center;
+}
+
+.card {
+  background-color: var(--card-backing);
+  margin: 0.2rem;
+  display: grid;
+  grid-template-areas: "priorityHighlight checked title description dueDate priority edit";
+  grid-template-columns: 1rem 5rem 1fr 3fr 0.7fr 5rem 5rem;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+#checked {
+  grid-area: checked;
+}
+
+.title {
+  grid-area: title;
+  padding-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.descripton {
+  grid-area: description;
+  padding-right: 1rem;
+}
+
+.dueDate {
+  grid-area: dueDate;
+  justify-self: center;
+}
+
+.priority {
+  grid-area: priority;
+  justify-self: center;
+}
+
+.edit {
+  grid-area: edit;
+  justify-self: center;
+}
+
+.priorityHighlight {
+  grid-area: priorityHighlight;
+  width: 100%;
+  height: 100%;
+}
+
+.ham {
+  width: 1.2rem;
+  height: 2px;
+  background-color: rgb(71, 71, 71);
+  margin: 6px 0;
+}
+
+.pHigh {
+  background-color: red;
+}
+
+.pMedium {
+  background-color: orange;
+}
+
+.pLow {
+  background-color: rgb(103, 255, 73);
+}
+
+.filterBlankPriority,
+.filterBlank {
+  background-color: #616161;
+}
+
+.filterTitle,
+.filterDescription,
+.filterDate,
+.filterPriority {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.caret {
+  cursor: pointer;
+  user-select: none;
+}
+
+.caret::before {
+  content: ">";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.tasks {
+  font-size: 1rem;
+}
+
+.subprojects {
+  font-size: 1.1rem;
+}
